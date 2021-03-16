@@ -1,0 +1,31 @@
+<form className='session-form-1'>
+                    <h1 className="form-header">{this.props.formType}</h1>
+                    <label>Email:
+                        <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                className="login-input"
+                        />
+                    </label>
+                    
+                    <p className="subtle-text">We'll send you an email to confirm your identity. Please check your inbox.</p>
+
+                    <button className="form-button">Continue</button>
+
+                    {/* Here I want to put in as a Bonus a "use gmail to signin or other options" */}
+
+                    <p className="already-then">Already have an account?</p>
+                    {/* <Link to="/login">{this.props.formType === "Sign Up" ? "Log In" : "Sign Up"}</Link> */}
+                    {/* Above i need to make a route to the other link */}
+
+</form>
+
+<form className="session-form-2">
+                    <h1 className="form-header">Confirm your email</h1>
+                    <p>Enter the code we sent over via email to {this.state.email}</p>
+
+                   {/* need to make an input where it only takes in numbers and is maximum 4 digits */}
+
+                   <p>Didnt get a code? Click Here!</p>
+                   {/* need to make a link to do something */}
+</form>
