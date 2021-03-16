@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 //     };
 // };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     return {
         formType: 'Sign Up',
     };
