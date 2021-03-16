@@ -12,11 +12,10 @@ import NavbarContainer from './navbar/navbar_container'
 export default () => (
     <div>
         <header>
-            <Link to="/" className="header-link">
-                <h1>Jaunt</h1>
-            </Link>
+            <Link to="/" className="header-link"><h1>Jaunt</h1></Link>
             <NavbarContainer/>
         </header>
+
         <Switch>
             <Route exact path="/" component={Splash} />
             <Route exact path="/login" component={LogInFormContainer} />
