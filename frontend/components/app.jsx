@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route,Redirect,Switch,Link,HashRouter} from 'react-router-dom';
 
-import {Splash} from '../components/splash/splash'
-import SignUpFormContainer from './session_form/signup_container';
-import LogInFormContainer from './session_form/login_container';
+import Splash from '../components/splash/splash'
+import SignUpFormContainer from './session/signup_container';
+import LogInFormContainer from './session/login_container';
 
 
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';

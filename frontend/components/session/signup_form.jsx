@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SignupForm extends Reeact.Component{
+class SignupForm extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -12,13 +12,13 @@ class SignupForm extends Reeact.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    update = (field) => {
+    update(field){
         return(
             e => this.setState({[field]: e.currentTarget.value})
         )
     }
 
-    handleSubmit = (e) => {
+    handleSubmit(e){
         e.preventDefault();
         let user = Object.assign({}, this.state);
         this.props.action(user);
@@ -28,7 +28,7 @@ class SignupForm extends Reeact.Component{
         return(
             <div>
                 <form className="session-form-3" onSubmit={this.handleSubmit}>
-                    <h1 className="form-header">{this.props.formtype}</h1>
+                    <h1 className="form-header">{this.props.formType}</h1>
 
                     <label>First Name:
                         <input type="text"

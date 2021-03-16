@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LoginForm extends Reeact.Component {
+class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,13 +11,13 @@ class LoginForm extends Reeact.Component {
 
     }
 
-    update = (field) => {
+    update(field){
         return (
             e => this.setState({ [field]: e.currentTarget.value })
         )
     }
 
-    handleSubmit = (e) => {
+    handleSubmit(e){
         e.preventDefault();
         let user = Object.assign({}, this.state);
         this.props.action(user);
@@ -27,7 +27,7 @@ class LoginForm extends Reeact.Component {
         return (
             <div>
                 <form className="login-form" onSubmit={this.handleSubmit}>
-                    <h1 className="form-header">{this.props.formtype}</h1>
+                    <h1 className="form-header">{this.props.formType}</h1>
 
                     <label>Email:
                         <input type="text"
@@ -46,7 +46,7 @@ class LoginForm extends Reeact.Component {
                         />
                     </label>
 
-                    <button>{this.props.formtype}</button>
+                    <button>{this.props.formType}</button>
 
                     <p>Dont have an account?</p>
                     {/* need to make a link to do something --> Sign up!*/}
