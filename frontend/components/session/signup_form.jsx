@@ -21,8 +21,6 @@ class SignupForm extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         let user = Object.assign({}, this.state);
-        console.log(this.props)
-        console.log(this.props.history)
         this.props.action(user).then(() => this.props.history.push('/'))
     }
 
