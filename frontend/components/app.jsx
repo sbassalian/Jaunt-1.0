@@ -1,15 +1,11 @@
 import React from 'react';
 import {Route,Redirect,Switch,Link,HashRouter} from 'react-router-dom';
 
-import Splash from '../components/splash/splash'
+import Home from '../components/home/home'
 import SignUpFormContainer from './session/signup_container';
 import LogInFormContainer from './session/login_container';
 import NavbarContainer from './navbar/navbar_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
-
-
-// import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 export default () => (
     <div>
@@ -19,10 +15,10 @@ export default () => (
         </header>
 
         <Switch>
-            <Route exact path="/" component={Splash} />
+            <Route exact path="/" component={Home} />
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-            <Route path="/" component={Splash} />
+            <Route path="/" component={Home} />
         </Switch>
     </div>
 );

@@ -5,6 +5,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script type="text/javascript">
+      window.homepagepic = "<%=image_url('airbnbicon.png')  %>"
+    </script>
+
+    <script type="text/javascript">
+      window.homepagepic = "<%=image_url('homepagepic.jpg')  %>"
+    </script>
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
@@ -13,3 +21,4 @@
     <%= yield %>
   </body>
 </html>
+
