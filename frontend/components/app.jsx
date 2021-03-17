@@ -9,10 +9,10 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 export default () => (
     <div>
-        <header>
+        {/* <header>
             <Link to="/" className="header-link"><h1>Jaunt</h1></Link>
             <NavbarContainer/>
-        </header>
+        </header> */}
 
         <Switch>
             <Route exact path="/" component={Home} />

@@ -1,22 +1,116 @@
-.home {
-    margin: auto;
-    display: flex;
-    width: 500px;
+// covid header
+
+.top .covid-header {
+    background-color:#222222;
+    color:#A3A3A3;
+    text-align: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    height: 58px;
+    // line-height: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
-.background-col {
+//background 
+
+.top .background {
     background-color: black;
-    height: 500px;
+    // background-size: cover;
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    left: 0;
+
 }
 
-.background-col > h1 {
-    // font-size:large;
+.top .background .background-home-image {
+    position: absolute;
+    width: 95%;
+    top: 160px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.top .background .search-bar {
+    border-radius: 999px;
+    border: 10px solid white;
+    background-color: white;
+
+    width: 70%;
+    position: absolute;
+    top: 125px;
+    left: 15%;
+
+    color: black;
+    z-index: 2;
+}
+
+.top .background .header-1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    top: 653px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.top .background .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 1000;
+    // background-color: white;
+    // z-index: 3;
+    margin: 10px auto auto auto;
+    width: 100%;
+    padding-top: 50px;
     color: white;
 }
 
-.home-icon {
+.top .background .header-left {
     display: flex;
+    width: 80px;
+    justify-content: space-between;
+    font-size: large;
+    margin: auto auto auto 80px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.top .background .header-left .home-icon {
+    object-fit: contain;
+    height: 20px;
     width: 20px;
-    background-color: white;
+    margin: auto auto auto 20px;
 
 }
+
+.top .background .header-center {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    max-width: fit-content;
+    // margin: auto auto auto auto;
+    padding-left: 175px;
+}
+
+.top .background .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 80px auto auto;
+    width: 275px;
+}
+

@@ -5,12 +5,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <script type="text/javascript">
-      window.homepagepic = "<%=image_url('airbnbicon.png')  %>"
-    </script>
 
     <script type="text/javascript">
+      window.airbnbicon = "<%=image_url('airbnbicon.png')  %>"
       window.homepagepic = "<%=image_url('homepagepic.jpg')  %>"
+      window.globeicon = "<%=image_url('globe.svg')  %>"
+      window.menuicon = "<%=image_url('menu.svg')  %>"
+      window.searchicon = "<%=image_url('search.svg')  %>"
+      window.usericon = "<%=image_url('usericon.svg')  %>"
     </script>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>

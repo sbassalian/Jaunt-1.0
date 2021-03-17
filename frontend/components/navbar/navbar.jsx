@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
     const displayLinks = () => (
-        <nav>
+        <div>
             <Link to="/login">Log in</Link>
-      <br/>
             <Link to="/signup">Sign up</Link>
-        </nav>
+        </div>
     );
     const displayMessage = () => (
        <div>
