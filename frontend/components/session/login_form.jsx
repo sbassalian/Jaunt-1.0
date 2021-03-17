@@ -20,7 +20,17 @@ class LoginForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         let user = Object.assign({}, this.state);
-        this.props.action(user).then(() => this.props.history.push('/'));
+        this.props.action(user);
+    }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error) => (
+                    <li>{error}</li>
+                ))}
+            </ul>
+        );
     }
 
     render() {
@@ -28,7 +38,7 @@ class LoginForm extends React.Component {
             <div>
                 <form className="login-form" onSubmit={this.handleSubmit}>
                     <h1 className="form-header">{this.props.formType}</h1>
-
+                    {this.renderErrors()}
                     <label>Email:
                         <input type="text"
                             value={this.state.email}

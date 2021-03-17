@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ currentUser, logout }) => {
     const displayLinks = () => (
         <nav>
-            <Link to="/login">Log In</Link>
+            <Link to="/login">Log in</Link>
       <br/>
             <Link to="/signup">Sign up</Link>
         </nav>

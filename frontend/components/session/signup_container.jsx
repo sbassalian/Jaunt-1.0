@@ -4,19 +4,19 @@ import SignupForm from './signup_form';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// const mapStateToProps = ({ errors }) => {
-//     return {
-//         errors: errors.session,
-//         formType: 'Sign Up',
-//         navLink: <Link to="/login">log in instead</Link>,
-//     };
-// };
-
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = state => {
     return {
+        errors: state.errors.session,
         formType: 'Sign Up',
+        // navLink: <Link to="/login">log in instead</Link>,
     };
 };
+
+// const mapStateToProps = (state, ownProps) => {
+//     return {
+//         formType: 'Sign Up',
+//     };
+// };
 
 
 const mapDispatchToProps = dispatch => ({

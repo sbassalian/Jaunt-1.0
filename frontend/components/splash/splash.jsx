@@ -14,10 +14,6 @@ class Splash extends React.Component {
         return (
             <div>
                 <h1>YOOOOOOO!!!!</h1>
-                <Link to='/signup'>Sign up here boi</Link>
-                <br/>
-                <Link to='/login'>Log in here boi</Link>
-
             </div>
         );
     }

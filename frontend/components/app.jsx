@@ -5,6 +5,8 @@ import Splash from '../components/splash/splash'
 import SignUpFormContainer from './session/signup_container';
 import LogInFormContainer from './session/login_container';
 import NavbarContainer from './navbar/navbar_container'
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+
 
 
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -18,8 +20,8 @@ export default () => (
 
         <Switch>
             <Route exact path="/" component={Splash} />
-            <Route exact path="/login" component={LogInFormContainer} />
-            <Route exact path="/signup" component={SignUpFormContainer} />
+            <AuthRoute exact path="/login" component={LogInFormContainer} />
+            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route path="/" component={Splash} />
         </Switch>
     </div>

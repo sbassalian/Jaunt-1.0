@@ -3,9 +3,8 @@ import { logout } from '../../actions/session';
 import NavBar from './navbar';
 
 const mapStateToProps = state => {
-    console.log(state);
     return {
-        currentUser: state.session.currentUser
+        currentUser: state.entities.users[state.session.id]
     };
 };
 
