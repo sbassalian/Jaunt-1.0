@@ -10,6 +10,9 @@ class SignupForm extends React.Component{
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
+
+
     }
 
     componentWillUnmount() {
@@ -62,7 +65,7 @@ class SignupForm extends React.Component{
                                         onChange={this.update('first_name')}
                                         className="login-input"
                                         placeholder="First Name"
-                                    />
+                                        />
                                 </div>
 
 
@@ -72,7 +75,7 @@ class SignupForm extends React.Component{
                                         onChange={this.update('last_name')}
                                         className="login-input"
                                         placeholder="Last Name"
-                                    />
+                                        />
                                 </div>
                             </div>
 
@@ -86,7 +89,7 @@ class SignupForm extends React.Component{
                                     onChange={this.update('email')}
                                     className="login-input"
                                     placeholder="Email"
-                                />
+                                    />
                             </div>
 
                             <div className="signup-texts">
@@ -122,6 +125,7 @@ class SignupForm extends React.Component{
                     <p>Already have an account?</p> */}
                     {/* need to make a link to do something --> Log in!*/}
                 </form>
+
             </div>
         )
     }
