@@ -16,3 +16,10 @@
 
  @import "home.scss";
 
+  @import "modal.scss";
+
+@import "login.scss";
+
+@import "signup.scss";
+
+

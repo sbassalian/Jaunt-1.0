@@ -3,6 +3,7 @@ import { signup } from '../../actions/session';
 import SignupForm from './signup_form';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { closeModal } from '../../actions/modal'
 
 const mapStateToProps = state => {
     return {
@@ -12,15 +13,10 @@ const mapStateToProps = state => {
     };
 };
 
-// const mapStateToProps = (state, ownProps) => {
-//     return {
-//         formType: 'Sign Up',
-//     };
-// };
-
 
 const mapDispatchToProps = dispatch => ({
-    action: (formUser) => dispatch(signup(formUser))
+    action: (formUser) => dispatch(signup(formUser)),
+    closeModal: () => dispatch(closeModal())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);
