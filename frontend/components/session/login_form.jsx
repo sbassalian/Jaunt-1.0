@@ -45,7 +45,8 @@ class LoginForm extends React.Component {
         return (
             <ul>
                 {this.props.errors.map((error) => (
-                    <li>{error}</li>
+                    // <li>{error}</li>
+                    <span>{error}. </span>
                 ))}
             </ul>
         );
@@ -61,8 +62,14 @@ class LoginForm extends React.Component {
                             <img  src={window.x} alt="" />
                         </button>
                     </div>
+
+                    <div className="rend-errors">
+                        <div className="rend-errors-2">
+
+                        {this.renderErrors()}
+                        </div>
+                    </div>
                     
-                    {this.renderErrors()}
 
                     <div className="no-shot-this-works">
                         <div className="form-border">
@@ -179,6 +186,7 @@ class LoginForm extends React.Component {
 
                 <div className="dont-have-acct">
                     <span>Dont have an account?</span>
+                    <button onClick={() => this.props.closeModal()} onClick={() => this.props.openModal('signup')}>Sign up here!</button>
                     
                 </div>
             </div>

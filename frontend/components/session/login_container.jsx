@@ -4,7 +4,7 @@ import { login, clearSessionErrors } from '../../actions/session';
 import LoginForm from './login_form';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {closeModal} from '../../actions/modal'
+import {closeModal, openModal} from '../../actions/modal'
 
 const mapStateToProps = state => {
     return {
@@ -25,7 +25,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
     action: (formUser) => dispatch(login(formUser)),
     closeModal: () => dispatch(closeModal()),
-    clearErrors: () => dispatch(clearSessionErrors())
+    clearErrors: () => dispatch(clearSessionErrors()),
+    openModal: modal => dispatch(openModal(modal)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

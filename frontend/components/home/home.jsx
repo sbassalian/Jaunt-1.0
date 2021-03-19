@@ -27,8 +27,10 @@ class Home extends React.Component {
                         <div className="header">
 
                             <div className="header-left">
-                                <img className="home-icon" src={window.airbnbicon} alt="" />
-                                <p>jaunt</p>
+                                <div className="j-logo">
+                                        <img className="home-icon" src={window.airbnbicon} alt="" />
+                                        <p>jaunt</p>
+                                </div>
                             </div>
 
                             <nav className="header-center">
@@ -38,7 +40,7 @@ class Home extends React.Component {
                             </nav>
 
                             <div className="header-right">
-                                <p>Become a host</p>
+                                <p className="bah">Become a host</p>
                                 <img className="globe-icon" src={window.globeicon} alt="" />
                                 {/* <button onClick={() => <LoginForm />}className='main-form-button'>
                                     <img className="menu-icon" src={window.menuicon} alt="" />

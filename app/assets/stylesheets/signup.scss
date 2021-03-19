@@ -41,10 +41,10 @@
 .no-shot-this-works-2 {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    // margin-top: 40px;
     z-index: 99;
     width: 100%;
-    height: 72%;
+    height: 450px;
     
 }
 
@@ -158,9 +158,10 @@ form .data-3 {
 }
 
 
-.dont-have-acct {
+.dont-have-acct-2 {
     display: flex;
-    margin-top: 35px;
+    // margin-top: 35px;
+    margin-left: 15px;
 }
 
 .dont-have-acct span {

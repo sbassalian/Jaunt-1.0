@@ -91,9 +91,9 @@
 
 .top .background .header-left .home-icon {
     object-fit: contain;
-    height: 20px;
-    width: 20px;
-    margin: auto auto auto 20px;
+    height: 45px;
+    width: 45px;
+    // margin: auto auto auto 20px;
 
 }
 
@@ -175,3 +175,13 @@
     top: 1000px;
 }
 
+.j-logo {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.bah {
+    font-size: 16px;
+}

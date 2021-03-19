@@ -37,7 +37,8 @@ class SignupForm extends React.Component{
         return (
             <ul>
                 {this.props.errors.map((error) => (
-                    <li>{error}</li>
+                    // <li>{error}</li>
+                    <span>{error}. </span>
                 ))}
             </ul>
         );
@@ -54,7 +55,12 @@ class SignupForm extends React.Component{
                         </button>
                     </div>
 
-                    {this.renderErrors()}
+                    <div className="rend-errors">
+                        <div className="rend-errors-2">
+
+                            {this.renderErrors()}
+                        </div>
+                    </div>
 
                     <div className="no-shot-this-works-2">
                         <div className="form-border-2">
@@ -109,6 +115,12 @@ class SignupForm extends React.Component{
                                 <span className="subtle-text">By selecting Agree and continue below, I agree to Jaunt's Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.</span>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="dont-have-acct-2">
+                        <span>Already have an account?</span>
+                        <button onClick={() => this.props.closeModal()} onClick={() => this.props.openModal('login')}>Log in here!</button>
+
                     </div>
 
                     <div className="modal-button-continue-2">
