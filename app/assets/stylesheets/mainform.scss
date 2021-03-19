@@ -10,6 +10,10 @@
     border: 1px solid rgb(228, 228, 228);
 }
 
+.mfb  button:focus{
+    outline: none !important;
+}
+
 .mfb2 {
     width: 100%;
     height: 100%;

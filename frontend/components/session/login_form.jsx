@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
 
     }
 
@@ -27,6 +28,17 @@ class LoginForm extends React.Component {
         // console.log("heyyy")
         // console.log(this.props.closeModal)
         this.props.action(user).then(this.props.closeModal);
+    }
+
+    handleDemoSubmit(e){
+        debugger
+        e.preventDefault();
+        let demoState = 
+            {
+                email: 'solomonbassalian@gmail.com',
+                password: '1234567'
+            };
+        this.props.action(demoState).then(this.props.closeModal);
     }
 
     renderErrors() {
@@ -141,7 +153,7 @@ class LoginForm extends React.Component {
                             </div>
 
 
-                        <div className="try-this">
+                        {/* <div className="try-this">
                             <a href="https://www.facebook.com/">
                                     <button>
                                         <div className="plz">
@@ -150,6 +162,17 @@ class LoginForm extends React.Component {
                                         </div>
                                     </button>
                             </a>
+                        </div> */}
+
+                        <div className="try-this">
+                            {/* <a href="https://www.facebook.com/"> */}
+                            <button onClick={this.handleDemoSubmit}>
+                                        <div className="plz">
+                                            {<img className="continue-with-icons" src={window.aA} alt="" />}
+                                            Continue with Demo User
+                                        </div>
+                            </button>
+                            {/* </a> */}
                         </div>
                     </div>
                 </div>

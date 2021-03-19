@@ -30,6 +30,7 @@ class SignupForm extends React.Component{
     }
 
     renderErrors() {
+        console.log(this.props)
         return (
             <ul>
                 {this.props.errors.map((error) => (
@@ -49,6 +50,7 @@ class SignupForm extends React.Component{
                             <img src={window.x} alt="" />
                         </button>
                     </div>
+
                     {this.renderErrors()}
 
                     <div className="no-shot-this-works-2">
@@ -74,7 +76,7 @@ class SignupForm extends React.Component{
                                 </div>
                             </div>
 
-                            <div classname="signup-texts">
+                            <div className="signup-texts">
                                 <span className="subtle-text">Make sure it matches the name on your government ID.</span>
                             </div>
 
@@ -87,7 +89,7 @@ class SignupForm extends React.Component{
                                 />
                             </div>
 
-                            <div classname="signup-texts">
+                            <div className="signup-texts">
                                 <span className="subtle-text">We'll email you trip confirmations and receipts.</span>
                             </div>
 
@@ -100,7 +102,7 @@ class SignupForm extends React.Component{
                                 />
                             </div>
 
-                            <div classname="signup-texts">
+                            <div className="signup-texts">
                                 <span className="subtle-text">By selecting Agree and continue below, I agree to Jaunt's Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.</span>
                             </div>
                         </div>
