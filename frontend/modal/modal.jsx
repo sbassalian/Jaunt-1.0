@@ -31,7 +31,7 @@ function Modal({ modal, closeModal }) {
             component = <SignupContainer />;
             break;
         case 'mainformbutton':
-            component = <MainFormButtonContainer grant={grant} />;
+            component = <MainFormButtonContainer grant={"grant"} />;
             break;
         default:
             return null;
