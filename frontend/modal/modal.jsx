@@ -38,7 +38,7 @@ function Modal({ modal, closeModal }) {
     }
 
     // console.log(component._owner.pendingProps.modal === modal);
-    console.log(modal);
+    console.log(component);
 
 
 
