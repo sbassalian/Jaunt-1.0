@@ -40,10 +40,10 @@ class Home extends React.Component {
                             <div className="header-right">
                                 <p>Become a host</p>
                                 <img className="globe-icon" src={window.globeicon} alt="" />
-                                <button onClick={() => <LoginForm />}className='main-form-button'>
+                                {/* <button onClick={() => <LoginForm />}className='main-form-button'>
                                     <img className="menu-icon" src={window.menuicon} alt="" />
                                     <img className="user-icon" src={window.usericon} alt="" />
-                                </button>
+                                </button> */}
                                 {/* < NavBar /> */}
 
                                 <NavbarContainer />

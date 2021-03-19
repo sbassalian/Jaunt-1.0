@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import SignupContainer from '../components/session/signup_container'
 import LoginContainer from '../components/session/login_container'
 import { closeModal } from '../actions/modal'
+import MainFormButtonContainer from '../components/main_form_button/main_form_button_container'
 
 
 const mapStateToProps = state => ({
@@ -20,7 +21,8 @@ function Modal({ modal, closeModal }) {
     }
     
     let component;
-    
+
+
     switch (modal) {
         case 'login':
             component = <LoginContainer />;
@@ -28,12 +30,30 @@ function Modal({ modal, closeModal }) {
         case 'signup':
             component = <SignupContainer />;
             break;
+        case 'mainformbutton':
+            component = <MainFormButtonContainer />;
+            break;
         default:
             return null;
     }
 
+    // console.log(component._owner.pendingProps.modal === modal);
+    // console.log(modal);
 
-                
+    if ('mainformbutton' === component._owner.pendingProps.modal)
+    {
+        return(
+            <>
+                <div className="modal-background" onClick={closeModal} >
+                </div>
+                <div className="mfb" onClick={e => e.stopPropagation()}>
+                    {component}
+                </div>
+
+            </>
+        )
+    }
+            
     return (
         <>
         <div className="modal-background" >

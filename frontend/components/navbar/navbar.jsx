@@ -17,22 +17,19 @@ class NavBar extends React.Component{
 
         );
         const displayLinks = () => {
-        // console.log(openModal)
             return (
                 <div>
-                    <nav className="login-signup">
-                        <button onClick={() => this.props.openModal('login')
-                        }>Login</button>
-                        <br />
-                        <button onClick={() => this.props.openModal('signup')}>Signup</button>
-                    </nav>
+                    <button onClick={() => this.props.openModal('mainformbutton')} className='main-form-button'>
+                        <img className="menu-icon" src={window.menuicon} alt="" />
+                        <img className="user-icon" src={window.usericon} alt="" />
+                    </button>
+                    
                 </div>
             )
         }
 
         return(
             <div>
-                {console.log(this.props.currentUser)}
                 {this.props.currentUser ? displayMessage() : displayLinks()}
             </div>
         )

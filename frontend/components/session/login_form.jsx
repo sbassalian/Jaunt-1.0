@@ -11,6 +11,10 @@ class LoginForm extends React.Component {
 
     }
 
+    componentWillUnmount(){
+        this.props.clearErrors()
+    }
+
     update(field){
         return (
             e => this.setState({ [field]: e.currentTarget.value })
@@ -79,7 +83,7 @@ class LoginForm extends React.Component {
                     </div>
 
                     <div className="modal-button-continue">
-                        <button>Continue</button>
+                        <button >Continue</button>
                     </div>
 
                     <div className="or-line">

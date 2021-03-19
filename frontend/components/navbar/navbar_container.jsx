@@ -4,7 +4,7 @@ import NavBar from './navbar';
 import {openModal} from '../../actions/modal'
 
 const mapStateToProps = state => {
-    console.log(state);
+ 
 
     return {
         currentUser: state.entities.users[state.session.id]
