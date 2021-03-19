@@ -37,12 +37,12 @@ function Modal({ modal, closeModal }) {
             return null;
     }
 
-    // console.log(component._owner.pendingProps.modal === modal);
-    console.log(component);
+    // console.log('grant' === component.props.grant);
+    // console.log(component);
 
 
 
-    if ('mainformbutton' === component._owner.pendingProps.modal)
+    if ('grant' === component.props.grant)
     {
         return(
             <>
