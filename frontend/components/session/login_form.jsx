@@ -125,7 +125,7 @@ class LoginForm extends React.Component {
                                 <button>
                                 <div className="plz">
                                     {<img className="continue-with-icons" src={window.linkedin} alt="" />}
-                                    Continue with LinkedIn
+                                    Continue to my LinkedIn
                                 </div>
                                 </button>
                             </a>
@@ -136,7 +136,7 @@ class LoginForm extends React.Component {
                                  <button>
                                      <div className="plz">
 
-                                     {<img className="continue-with-icons" src={window.github} alt="" />}Continue with Github
+                                     {<img className="continue-with-icons" src={window.github} alt="" />}Continue to my Github
                                      </div>
                                 </button>
                         </a>
@@ -149,7 +149,7 @@ class LoginForm extends React.Component {
                                 <button>
                                     <div className="plz">
 
-                                        {<img className="continue-with-icons" src={window.google} alt="" />}
+                                        {<img className="continue-with-icons" src={window.googleimg} alt="" />}
                                         
                                         {<span>Continue with Google</span>}
                                         {/* Continue with Google  */}

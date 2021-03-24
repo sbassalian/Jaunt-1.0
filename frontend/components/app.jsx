@@ -10,6 +10,7 @@ import Modal from '../modal/modal'
 import NavBar from './navbar/navbar'
 import HomeContainer from '../components/home/home_container'
 import configureStore from '../store/store';
+import ListingIndexContainer from './listings/listings_index_container' 
 
 export default () => (
     <div>
@@ -25,6 +26,7 @@ export default () => (
             {/* <Route exact path="/" component={Home} /> */}
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            <Route exact path="/listings" component={ListingIndexContainer} />
             <Route path="/" component={HomeContainer} />
         </Switch>
     </div>

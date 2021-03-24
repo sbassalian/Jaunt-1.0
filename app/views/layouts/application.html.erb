@@ -8,6 +8,7 @@
 
     <script type="text/javascript">
       window.airbnbicon = "<%=image_url('airbnbicon.png')  %>"
+      window.airbnbblack = "<%=image_url('airbnbblack.png')  %>"
       window.homepagepic = "<%=image_url('homepagepic.jpg')  %>"
       window.globeicon = "<%=image_url('globe.svg')  %>"
       window.menuicon = "<%=image_url('menu.svg')  %>"
@@ -15,15 +16,35 @@
       window.usericon = "<%=image_url('usericon.svg')  %>"
       window.linkedin = "<%=image_url('linkedin.png')  %>"
       window.github = "<%=image_url('githublogo.png')  %>"
-      window.google = "<%=image_url('google.png')  %>"
+      window.googleimg = "<%=image_url('google.png')  %>"
       window.facebook = "<%=image_url('Facebook-logo.png')  %>"
       window.aA = "<%=image_url('aA.png')  %>"
       window.x = "<%=image_url('x.svg')  %>"
+      window.mht1 = "<%=image_url('mht1.png')  %>"
+      window.mht2 = "<%=image_url('mht2.png')  %>"
+      window.mht3 = "<%=image_url('mht3.png')  %>"
+      window.mht4 = "<%=image_url('mht4.png')  %>"
+      window.mht5 = "<%=image_url('mht5.png')  %>"
+      window.star = "<%=image_url('star.svg')  %>"
+      window.aventura = "<%=image_url('aventura.png')  %>"
+      window.hollywood = "<%=image_url('hollywood.png')  %>"
+      window.davenport = "<%=image_url('davenport.png')  %>"
+      window.boca = "<%=image_url('boca.png')  %>"
+      window.tampa = "<%=image_url('tampa.png')  %>"
+      window.miami = "<%=image_url('miami.png')  %>"
+      window.keywest = "<%=image_url('keywest.png')  %>"
+      window.kissimmee = "<%=image_url('kissimmee.png')  %>"
+      window.dishes = "<%=image_url('dishes.png')  %>"
+      window.etw1 = "<%=image_url('etw1.png')  %>"
+      window.etw2 = "<%=image_url('etw2.png')  %>"
+      window.etw3 = "<%=image_url('etw3.png')  %>"
 
 
     </script>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}"%>
+    
+    <%= stylesheet_link_tag 'application', media: 'all' %> <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application' %>
   </head>
 

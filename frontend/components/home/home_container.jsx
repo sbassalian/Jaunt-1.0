@@ -4,7 +4,7 @@ import {closeModal} from '../../actions/modal'
 
 
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
     modal: state.ui.modal
 })
 
