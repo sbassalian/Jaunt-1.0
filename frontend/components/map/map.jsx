@@ -6,13 +6,13 @@ class JMap extends React.Component {
     }
 
     componentDidMount() {
-        // set the map to show SF
+
         const mapOptions = {
-        center: { lat: 40.7494, lng: -73.9809 }, // this is SF
+        center: { lat: 25.7991, lng: -80.1238 },
             zoom: 13
         };
 
-        // wrap this.mapNode in a Google Map
+ 
         this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
     }
 
@@ -20,7 +20,7 @@ class JMap extends React.Component {
         return (
             <div className="jmap" id="map">
                 <h1>Map</h1>
-            </div> // this ref gives us access to the map dom node
+            </div> 
         )
     }
 

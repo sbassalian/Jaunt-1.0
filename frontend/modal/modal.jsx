@@ -37,8 +37,7 @@ function Modal({ modal, closeModal }) {
             return null;
     }
 
-    // console.log('grant' === component.props.grant);
-    // console.log(component);
+
 
 
 

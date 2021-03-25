@@ -25,7 +25,7 @@ class ListingsIndex extends React.Component{
     }
 
     render(){
-        console.log(this.props.listings)
+
         return(
             <div className="plsss">
                 

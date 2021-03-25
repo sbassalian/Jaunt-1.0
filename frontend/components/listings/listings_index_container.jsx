@@ -4,7 +4,7 @@ import {fetchListings} from '../../actions/listing'
 import {makeArray} from '../../reducers/selectors'
 
 const mapStateToProps = state => {
-    console.log(state);
+
 return {
         listings: makeArray(state.entities.listings)
     };

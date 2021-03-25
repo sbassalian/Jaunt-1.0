@@ -11,7 +11,7 @@ import NavbarContainer from '../navbar/navbar_container'
 class Home extends React.Component {
     constructor(props){
         super(props)
-        console.log(props);
+
         this.handleClick = this.handleClick.bind(this);
         this.handleClickHome = this.handleClickHome.bind(this);
     }
