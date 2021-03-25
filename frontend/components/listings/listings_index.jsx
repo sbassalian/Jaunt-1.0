@@ -14,6 +14,7 @@ class ListingsIndex extends React.Component{
 
     componentDidMount(){
         this.props.fetchListings()
+
     }
 
     handleClick(id) {
@@ -78,7 +79,8 @@ class ListingsIndex extends React.Component{
         
                             <div onClick={() => this.handleClick(listing.id)} className="il">
                                 <div className="ili">
-                                    <img src={window.mht1} />
+                                    
+                                    <img src={window[listing.picture_url_1]} />
                                 </div> 
                                 <div className="ilc">
                                     <div className="ilc1">
