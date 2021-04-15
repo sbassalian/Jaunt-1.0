@@ -51,7 +51,12 @@ Other things to note
   picture_url_2: 'w2',
   picture_url_3: 'w3',
   picture_url_4: 'w4',
-  picture_url_5: 'w5'
+  picture_url_5: 'w5',
+  num_bedrooms: 3,
+  num_beds: 3,
+  num_baths: 3,
+  amenities: "Kitchen, WIFI, TV, Iron, Pool, Basketball Court",
+  type_of_place: "Entire guest suite"
 )
 
 Listing.create!(
@@ -100,6 +105,11 @@ Other things to note
   picture_url_2: 'hotel12',
   picture_url_3: 'hotel13',
   picture_url_4: 'hotel14',
-  picture_url_5: 'hotel15'
+  picture_url_5: 'hotel15',
+  num_bedrooms: 3,
+  num_beds: 4,
+  num_baths: 2,
+  amenities: "Kitchen, WIFI, TV, Iron, Pool, Basketball Court",
+  type_of_place: "Entire apartment"
 )
 

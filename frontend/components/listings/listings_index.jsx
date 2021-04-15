@@ -26,7 +26,7 @@ class ListingsIndex extends React.Component{
     }
 
     render(){
-
+        console.log(this.props.listings[0])
         return(
             <div className="plsss">
                 
@@ -64,7 +64,7 @@ class ListingsIndex extends React.Component{
 
                 <div className="listings-bottom">
                     <div className="listings">
-                        <span className="listingsa">3 stays near you</span>
+                        <span className="listingsa">{this.props.listings.length} stays</span>
                         <h1>Stays in selected map area</h1>
                         <div className="fo">
                             <button>Cancellation Flexibility</button>
@@ -73,7 +73,7 @@ class ListingsIndex extends React.Component{
                             <button>Instant Book</button>
                             <button>More Filters</button>
                         </div>
-                        <span className="cv">Review COVID-19 travel restrictions before you book.</span>
+                        <span className="cv">Please review COVID-19 travel restrictions before you book.</span>
                         
                         {this.props.listings.map((listing) => (
         
@@ -84,7 +84,7 @@ class ListingsIndex extends React.Component{
                                 </div> 
                                 <div className="ilc">
                                     <div className="ilc1">
-                                        <span>Entire place in {listing.city}</span>
+                                        <span>{listing.type_of_place} in {listing.city}</span>
                                     </div>
 
                                     <div className="ilc2">
@@ -95,23 +95,38 @@ class ListingsIndex extends React.Component{
                                     </div>
 
                                     <div className="ilc4">
-                                        <span>2 guests</span>
+                                        <span>{listing.num_guests_avail} guests</span>
                                         <span className="dot">.</span>
-                                        <span>1 Bedroom</span>
+
+                                        <span>
+                                            {!listing.num_bedrooms ? 'Studio' : listing.num_bedrooms > 0 ? listing.num_bedrooms + ' Bedrooms' : 1 + ' Bedroom'}    
+                                        </span>
                                         <span className="dot">.</span>
-                                        <span>1 Bed</span>
+                                        <span>
+                                            {!listing.num_beds ? 'Studio' : listing.num_beds > 0 ? listing.num_beds + ' Beds' : 1 + ' Bed'}
+                                        </span>
                                         <span className="dot">.</span>
-                                        <span>1.5 Baths</span>
+                                        <span>
+                                            {listing.num_baths > 0 ? listing.num_baths + ' Baths' : 1 + ' Bath'}
+                                        </span>
                                     </div>
 
-                                    <div className="ilc4">
-                                        <span>Wifi</span>
-                                        <span className="dot">.</span>
-                                        <span>Kitchen</span>
-                                        <span className="dot">.</span>
-                                        <span>Heating</span>
-                                        <span className="dot">.</span>
-                                        <span>Air</span>
+                                    <div className="ilc4" id="amensvjs">
+                                        {listing.amenities.split(',').map((amen, i)=>{
+                                                console.log(amen);
+                                            
+                                            if (i <= 3){
+                                                return (
+                                                    <div className="ilc4a">
+                                                        <span>{amen}</span>
+                                                        {i < 3 ? <span className="dot">.</span> : <span></span> }
+                                                    </div>
+                                                )
+                                            }
+
+                   
+                                        })}
+
                                     </div>
 
                                     <div className="ilc5">
