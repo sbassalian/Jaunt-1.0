@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {fetchListings, fetchListing} from '../../actions/listing'
 import {makeArray} from '../../reducers/selectors'
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
 
 return {
         listings: makeArray(state.entities.listings)

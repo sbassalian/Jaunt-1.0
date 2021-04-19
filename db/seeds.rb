@@ -66,8 +66,8 @@ Listing.create!(
   country: 'United States',
   zip_code: 33139,
   price: 1696,
-  lat: 25.797590328146846,
-  lng: -80.12681756510017,
+  lat: 25.798551467714425,
+  lng: -80.12742374198778,
   num_guests_avail: 4,
   description: "Make yourself at home in this luxury Private Residence, available for short-term rental and located within Miami’s first eco-friendly 1 Hotel & Homes. Overlooking beautiful Downtown Miami, this unit has the conveniences of home in addition to all the amenities of a 5-star resort. With two bedrooms and a pull out sofa in the living area, this unit is the perfect home base for a family vacation, that long-overdue boys trip or that relaxing girls getaway.
 

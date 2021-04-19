@@ -9,12 +9,20 @@ class ListingsIndex extends React.Component{
     constructor(props){
         super(props)
         this.handleClick = this.handleClick.bind(this);
-        this.handleClickHome = this.handleClickHome.bind(this)
+        this.handleClickHome = this.handleClickHome.bind(this);
+        this.state = {listings:[]};
+        console.log(this.props);
+        
     }
 
     componentDidMount(){
         this.props.fetchListings()
+    
 
+    }
+
+    componentWillReceiveProps(newState) {
+        this.setState({ listings: newState.listings });
     }
 
     handleClick(id) {
@@ -26,7 +34,10 @@ class ListingsIndex extends React.Component{
     }
 
     render(){
-        console.log(this.props.listings[0])
+        // let mounted = false;
+        if (!!this.state.listings.length){
+
+        
         return(
             <div className="plsss">
                 
@@ -113,7 +124,7 @@ class ListingsIndex extends React.Component{
 
                                     <div className="ilc4" id="amensvjs">
                                         {listing.amenities.split(',').map((amen, i)=>{
-                                                console.log(amen);
+                                                
                                             
                                             if (i <= 3){
                                                 return (
@@ -150,12 +161,18 @@ class ListingsIndex extends React.Component{
                     </div>
 
                     <div className="map">
-                        <JMap />
+                       
+                        <JMap listings={this.props.listings} singleListing={false} history={this.props.history}/>
                     </div>
                 </div>
 
             </div>
-        )
+        )}
+        else{
+            return(
+                <div></div>
+            )
+        }
     }
 };
 
