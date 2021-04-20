@@ -5,7 +5,9 @@ import NavBar from '../navbar/navbar';
 import Search from '../search/search';
 import NavbarContainer from '../navbar/navbar_container'
 // import HomeContainer from './home_container'
-
+import ListingIndex from '../listings/listings_index_container'
+import ListingsIndex from '../listings/listings_index';
+import SearchContainer from '../search/search_container'
 
 
 class Home extends React.Component {
@@ -76,7 +78,8 @@ class Home extends React.Component {
         
 
                         <div className="search-bar">
-                            < Search />
+                            {/* < Search history={this.props.history}/> */}
+                            < SearchContainer history={this.props.history} />
                         </div>
 
                         <p className="header-1">Made possible by Hosts</p>

@@ -15,15 +15,13 @@ class ListingsIndex extends React.Component{
         
     }
 
-    componentDidMount(){
-        this.props.fetchListings()
-    
+    // componentDidMount(){
+    //     this.props.fetchListings()
+    // }
 
-    }
-
-    componentWillReceiveProps(newState) {
-        this.setState({ listings: newState.listings });
-    }
+    // componentWillReceiveProps(newState) {
+    //     this.setState({ listings: newState.listings });
+    // }
 
     handleClick(id) {
         this.props.history.push(`/listings/${id}`);
@@ -34,8 +32,10 @@ class ListingsIndex extends React.Component{
     }
 
     render(){
+
+        let idk = true;
         // let mounted = false;
-        if (!!this.state.listings.length){
+        if (idk){
 
         
         return(
