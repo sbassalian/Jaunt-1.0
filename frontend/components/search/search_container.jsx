@@ -7,8 +7,9 @@ import {updateFilter} from '../../actions/filter'
 
 const mapStateToProps = (state, ownProps) => ({
     minGuests: state.ui.filters.minGuests,
-    maxGuests: state.ui.filters.maxGuests,
+    destination: state.ui.filters.destination,
     state: state,
+    
 
 });
 

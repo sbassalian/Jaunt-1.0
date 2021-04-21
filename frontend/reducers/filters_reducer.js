@@ -4,6 +4,7 @@ import { UPDATE_FILTER } from '../actions/filter';
 const defaultFilters = Object.freeze({
     bounds: {},
     minGuests: 1,
+    destination: 'Miami Beach'
 });
 
 const filtersReducer = (state = defaultFilters, action) => {

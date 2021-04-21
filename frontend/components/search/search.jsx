@@ -9,12 +9,17 @@ class Search extends React.Component {
         console.log(this.props);
     }
 
+
     handleClick() {
         this.props.history.push(`/listings`);
     }
 
     handleChange(filter){
         return e => this.props.updateFilter(filter, parseInt(e.currentTarget.value))
+    };
+
+    handleChange2(filter) {
+        return e => this.props.updateFilter(filter, e.currentTarget.value)
     };
 
 
@@ -32,8 +37,9 @@ class Search extends React.Component {
         return (
             <div className='search-form'>
                 <form >
+
                     <label> Location
-                        <input type="text" value="" placeholder="Where are you going?" />
+                        <input type="text" placeholder={this.props.destination} onChange={this.handleChange2('destination')} />
                     </label>
 
                     <label> Check in

@@ -6,7 +6,9 @@ class Api::ListingsController < ApplicationController
     # listings = bounds ? Listing.in_bounds(bounds) : Listing.all
     listings = Listing.all
     
-    
+    if params[:destination]
+      listings = listings.where(city: "#{params[:destination]}") 
+    end
     # listings = listings.where("10 <= num_guests_avail") 
     
     if params[:minGuests]
