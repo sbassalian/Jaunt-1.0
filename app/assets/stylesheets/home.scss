@@ -1,5 +1,9 @@
 // covid header
 
+@import url(//db.onlinewebfonts.com/c/bd6213fa49bedc8cb050c63f14360efa?family=Circular+Air+Book);
+
+@font-face {font-family: "Circular Air Book"; src: url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.eot"); src: url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.woff") format("woff"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.svg#Circular Air Book") format("svg"); }
+
 .top .covid-header {
     background-color:#222222;
     color:#A3A3A3;
@@ -40,17 +44,84 @@
 
 .top .background .search-bar {
     border-radius: 999px;
-    border: 10px solid white;
+    border: 1px solid lightgray;
     background-color: white;
 
-    width: 70%;
+    width: 848px;
+    height: 64px;
     position: absolute;
     top: 125px;
-    left: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 
     color: black;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    font-family: Circular Air Book;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
 }
+
+.search-bar form {
+    width: 100%;
+    // background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.search-bar form label {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // padding-right: 15px;
+    border-right: 1px solid lightgray;
+    padding-right: 45px;
+    padding-left: 20px;
+    
+}
+
+
+.search-bar form label input {
+    padding-top: 5px;
+    border: none;
+    font-family: Circular Air Book;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+   
+    // color: lightgray;
+    
+}
+
+.search-bar form button {
+    border: 0px;
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+#guestscountborder{
+    border-right: none;
+    
+}
+
+#guestscountborder input{
+    width: 40px;
+}
+
 
 .top .background .header-1 {
     position: absolute;
@@ -146,6 +217,10 @@
     color: white;
     font-size: 12px;
     cursor: pointer;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 5px;
+    
 }
 
 .gi {
@@ -278,6 +353,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     // padding-left: 40px;
     // padding-right: 40px;
 
@@ -286,6 +362,7 @@
 .bah1 {
     display: flex;
     justify-content: center;
+    
 }
 
 

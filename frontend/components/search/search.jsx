@@ -25,38 +25,30 @@ class Search extends React.Component {
 
 
     render() {
-        let today = new Date();
-
-        let dd = String(today.getDate()).padStart(2, '0');
-        let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        let yyyy = today.getFullYear();
-        today = yyyy + '-' + mm + '-' + dd;
-
         
-
         return (
-            <div className='search-form'>
+            <div className="search-bar">
                 <form >
 
-                    <label> Location
-                        <input type="text" placeholder={this.props.destination} onChange={this.handleChange2('destination')} />
+                    <label id="locationpadding"> Location
+                        <input type="text" placeholder="Where are you going?"  onChange={this.handleChange2('destination')} />
                     </label>
 
                     <label> Check in
-                        <input type="date" value={today} />
+                        <input type="date" placeholder={this.props.startDate} onChange={this.handleChange2('startDate')}  />
                     </label>
 
                     <label> Check out
-                        <input type="date" value={today} />
+                        <input type="date" value={this.props.endDate} onChange={this.handleChange2('endDate')} />
                     </label>
 
-                    <label> Guests
-                        <input type="number" value={this.props.minGuests} onChange={this.handleChange('minGuests')} />
+                    <label id="guestscountborder"> Guests
+                        <input type="number" placeholder={this.props.minGuests} onChange={this.handleChange('minGuests')} />
                     </label>
 
 
                     <button onClick={() => this.handleClick()}>
-                        <img className="home-icon" src={window.searchicon} /> Search
+                        <img className="home-icon" src={window.searchicon} />
                     </button>
 
                 </form>

@@ -8,6 +8,11 @@ import {updateFilter} from '../../actions/filter'
 const mapStateToProps = (state, ownProps) => ({
     minGuests: state.ui.filters.minGuests,
     destination: state.ui.filters.destination,
+    dd: state.ui.filters.dd,
+    mm: state.ui.filters.mm,
+    yyyy: state.ui.filters.yyyy,
+    startDate: state.ui.filters.startDate,
+    endDate: state.ui.filters.endDate,
     state: state,
     
 

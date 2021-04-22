@@ -77,7 +77,7 @@ class Home extends React.Component {
                         <img className="background-home-image"src={window.homepagepic} />
         
 
-                        <div className="search-bar">
+                        <div>
                             {/* < Search history={this.props.history}/> */}
                             < SearchContainer history={this.props.history} />
                         </div>
