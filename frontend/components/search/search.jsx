@@ -25,6 +25,7 @@ class Search extends React.Component {
 
 
     render() {
+        console.log(this.props.startDate)
         
         return (
             <div className="search-bar">
@@ -35,7 +36,7 @@ class Search extends React.Component {
                     </label>
 
                     <label> Check in
-                        <input type="date" placeholder={this.props.startDate} onChange={this.handleChange2('startDate')}  />
+                        <input type="date" value={this.props.startDate} onChange={this.handleChange2('startDate')}  />
                     </label>
 
                     <label> Check out

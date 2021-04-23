@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_15_192419) do
+ActiveRecord::Schema.define(version: 2021_04_23_154220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_04_15_192419) do
     t.integer "num_baths"
     t.text "amenities"
     t.string "type_of_place"
+    t.text "reserved_dates", default: [], array: true
   end
 
   create_table "users", force: :cascade do |t|

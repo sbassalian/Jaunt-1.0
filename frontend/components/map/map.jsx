@@ -21,7 +21,7 @@ class JMap extends React.Component {
         if (this.props.singleListing) {
             this.MarkerManager.createMarkerFromListing(this.props.listing);
             // this.props.fetchListing(this.props.listingId);
-            console.log("hit")
+            
         } else {
             this.registerListeners();
             this.MarkerManager.updateMarkers(this.props.listings);
