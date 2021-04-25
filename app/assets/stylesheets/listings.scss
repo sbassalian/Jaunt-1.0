@@ -23,6 +23,7 @@
     z-index: 2;
     font-size: 25px;
     font-weight: 600;
+    font-weight: 600;
     width: fit-content;
     margin-left: 50px;
     cursor: pointer;
@@ -34,13 +35,36 @@
     
 }
 
+
 .lhc {
+    border-radius: 999px;
+    border: 1px solid lightgray;
+    background-color: white;
+
+    width: 848px;
+    height: 64px;
+    // position: absolute;
+    // top: 125px;
+    // margin-left: auto;
+    // margin-right: auto;
+    // left: 0;
+    // right: 0;
+
+    color: black;
+    z-index: 2;
     display: flex;
-    flex: 1;
-    align-items: center;
-    width: fit-content;
     justify-content: center;
-    height: 48px;
+    align-items: center;
+    font-family: Circular Air Book;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+
+    position: relative;
+    
+    margin-right: auto;
+    margin-left: 100px;
     
 }
 

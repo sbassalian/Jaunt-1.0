@@ -32,19 +32,19 @@ class Search extends React.Component {
                 <form >
 
                     <label id="locationpadding"> Location
-                        <input type="text" placeholder="Where are you going?"  id="uid" onChange={this.handleChange2('destination')} />
+                        <input type="text" value={this.props.destination}  onChange={this.handleChange2('destination')} />
                     </label>
 
                     <label> Check in
-                        <input type="date" value={this.props.startDate} id="uisd" onChange={this.handleChange2('startDate')}  />
+                        <input type="date" value={this.props.startDate}  onChange={this.handleChange2('startDate')}  />
                     </label>
 
                     <label> Check out
-                        <input type="date" value={this.props.endDate} id="uied" onChange={this.handleChange2('endDate')} />
+                        <input type="date" value={this.props.endDate}  onChange={this.handleChange2('endDate')} />
                     </label>
 
                     <label id="guestscountborder"> Guests
-                        <input type="number" placeholder={this.props.minGuests} id="uigc" onChange={this.handleChange('minGuests')} />
+                        <input type="number" value={this.props.minGuests}  onChange={this.handleChange('minGuests')} />
                     </label>
 
 

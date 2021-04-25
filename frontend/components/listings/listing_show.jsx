@@ -1,18 +1,35 @@
 import React from 'react';
 import NavBarContainer from '../navbar/navbar_container'
 import JMap from '../map/map'
+import SearchContainer from '../search/search_container'
+
 
 class ListingShow extends React.Component {
     constructor(props){
         super(props)
         this.handleClickHome = this.handleClickHome.bind(this)
         
-        this.okay = false;
+        this.state = {
+            "render": false
+        };
     }
 
     componentDidMount(){
-        this.okay = true;
-        this.props.fetchListing(this.props.listingId)
+         this.props.fetchListing(this.props.listingId).then(() => this.setState({["render"]: true}))
+       
+    }
+
+    handleChange(filter) {
+    
+        return e => this.props.updateFilter(filter, parseInt(e.currentTarget.value))
+    };
+
+    handleChange2(filter) {
+        return e => this.props.updateFilter(filter, e.currentTarget.value)
+    };
+
+    handleNothing(){
+        console.log("hi")
     }
 
     // componentDidUpdate() {
@@ -23,19 +40,36 @@ class ListingShow extends React.Component {
         this.props.history.push(`/`);
     }
 
+    parseDate(str) {
+    let ymd = str.split('-');
+    console.log(ymd)
+    return new Date(ymd[0], ymd[1] - 1, ymd[2]);
+    }
+
+    datediff(first, second) {
+        console.log(first)
+        console.log(second)
+    // Take the difference between the dates and divide by milliseconds per day.
+    // Round to nearest whole number to deal with DST.
+        return Math.round((second - first) / (1000 * 60 * 60 * 24));
+    }
+
+
+
+    
+
     
     render(){
-
-
-        if (this.okay){
-
-            console.log(this.props.listing.price)
-
-            let nights = this.props.listing.price * 7;
+        if (this.state["render"]){
+            
+           
+            let nights = this.props.listing.price * (this.datediff(this.parseDate(this.props.filters.startDate),this.parseDate(this.props.filters.endDate)));
             let cleaning = this.props.listing.price * .067;
             let service = this.props.listing.price * .15;
             let occupancy = this.props.listing.price * .074
             let total = (nights + cleaning + service + occupancy).toFixed(2)
+
+            console.log(this.props)
 
             
             const pu1 = this.props.listing.picture_url_1;
@@ -49,7 +83,7 @@ class ListingShow extends React.Component {
                         </div>
     
                         <div className="lhc">
-                            <div className="lhc2">
+                            {/* <div className="lhc2">
                                 <button>Insert Area Here</button>
     
                                 <button>Add Dates</button>
@@ -62,7 +96,9 @@ class ListingShow extends React.Component {
                                         <img src={window.searchicon} alt="" />
                                     </div>
                                 </button>
-                            </div>
+                            </div> */}
+                            
+                            < SearchContainer />
                         </div>
     
     
@@ -219,17 +255,18 @@ class ListingShow extends React.Component {
                                 <div className="lsdatesa">
                                     <div className="lsdatesaa">
                                         <span>CHECK IN</span>
-                                        <input type="date" id="lsda"/>
+                                        <input type="date" 
+                                            value={this.props.filters.startDate} id="lsda" onChange={this.handleChange2('startDate')}/>
                                     </div>
                                     <div>
                                         <span>CHECK OUT</span>
-                                        <input type="date" id="lsda" />
+                                        <input type="date" id="lsda" value={this.props.filters.endDate} onChange={this.handleChange2('endDate')}/>
                                     </div>
                                 </div>
 
                                 <div className="lsdatesb">
                                     <span>GUESTS</span>
-                                    <input type="number" id="lsda"/>
+                                    <input type="number" value={this.props.filters.minGuests >= this.props.listing.num_guests_avail ? this.props.listing.num_guests_avail : this.props.filters.minGuests < 1 ? 1 : this.props.filters.minGuests} onChange={this.props.filters.minGuests >= this.props.listing.num_guests_avail ? this.handleNothing : this.handleChange('minGuests')}id="lsda"/>
                                 </div>
                             </form>
 
@@ -243,7 +280,7 @@ class ListingShow extends React.Component {
 
                             <div className="lsprices">
                                 <div className="lspricesa">
-                                    <span>${this.props.listing.price} x 7 nights</span>
+                                    <span>${this.props.listing.price} x {(this.datediff(this.parseDate(this.props.filters.startDate),this.parseDate(this.props.filters.endDate)))} nights</span>
                                     <span>${nights.toFixed(2)}</span>
                                 </div>
 
@@ -282,6 +319,7 @@ class ListingShow extends React.Component {
             )
         }
         else{
+            console.log("hit")
             return(
                 <div>
                     {/* <h1>Loading!</h1> */}

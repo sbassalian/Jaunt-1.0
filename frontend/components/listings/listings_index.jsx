@@ -2,7 +2,7 @@ import React from 'react';
 import IndividualListing from './individual_listing'
 import NavBarContainer from '../navbar/navbar_container'
 import JMap from '../map/map'
-
+import SearchContainer from'../search/search_container'
 
 class ListingsIndex extends React.Component{
 
@@ -49,7 +49,7 @@ class ListingsIndex extends React.Component{
                     </div>
 
                     <div className="lhc">
-                        <div className="lhc2">
+                        {/* <div className="lhc2">
                             <button>Insert Area Here</button>
 
                             <button>Add Dates</button>
@@ -62,8 +62,10 @@ class ListingsIndex extends React.Component{
                                     <img src={window.searchicon} alt="" />
                                 </div>
                             </button>
-                        </div>
+                        </div> */}
+                        <SearchContainer />
                     </div>
+                    
 
 
                     <div className="lhr">
