@@ -33,6 +33,9 @@ function Modal({ modal, closeModal }) {
         case 'mainformbutton':
             component = <MainFormButtonContainer grant={"grant"} />;
             break;
+        case 'confirmres':
+            component = <ProfileContainer />;
+            break;
         default:
             return null;
     }

@@ -19,6 +19,11 @@ class JMap extends React.Component {
         this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
         this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
         if (this.props.singleListing) {
+            let hello1 = document.getElementById('map');
+            if (true) {
+                hello1.id = "map2";
+                console.log("hit meeeeee")
+            }
             this.MarkerManager.createMarkerFromListing(this.props.listing);
             // this.props.fetchListing(this.props.listingId);
             
@@ -30,9 +35,15 @@ class JMap extends React.Component {
 
     componentDidUpdate() {
         if (this.props.singleListing) {
+
+            // let hello1 = document.getElementById('map');
+            // if (true) {
+            //     hello1.id = "map2";
+            //     console.log("hit meeeeee")
+            // }
             // const targetListingKey = Object.keys(this.props.listings)[0];
             // const targetListing = this.props.listings[targetListingKey];
-            console.log("hit") //grabs only that one listing
+            console.log("hitttttt") //grabs only that one listing
         } else {
             this.MarkerManager.updateMarkers(this.props.listings);
         }
@@ -60,11 +71,16 @@ class JMap extends React.Component {
     }
 
     render() {
-        return (
-            <div className="jmap" id="map">
-                <h1>Map</h1>
-            </div> 
-        )
+            
+            return (
+                <div id="map" >
+                    <h1>Map</h1>
+                </div>
+            )
+                
+            
+            
+        
     }
 
 

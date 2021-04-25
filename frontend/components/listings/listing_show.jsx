@@ -307,12 +307,16 @@ class ListingShow extends React.Component {
 
                         </div>
 
+                        
+
 
 
                     </div>
 
                     
-
+                    <div className="map2">
+                            <JMap listing={this.props.listing} singleListing={true}/>
+                    </div>
 
 
                 </div>
