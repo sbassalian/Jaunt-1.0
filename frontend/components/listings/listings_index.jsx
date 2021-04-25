@@ -36,7 +36,7 @@ class ListingsIndex extends React.Component{
         let idk = true;
         // let mounted = false;
         if (idk){
-
+        // console.log(document.getElementById("uid").value)
         
         return(
             <div className="plsss">
@@ -76,7 +76,9 @@ class ListingsIndex extends React.Component{
                 <div className="listings-bottom">
                     <div className="listings">
                         <span className="listingsa">{this.props.listings.length} stays</span>
-                        <h1>Stays in selected map area</h1>
+                        
+                        <h1>{!this.props.listings.length ? 'Sorry, no current stays here. Try searching Miami Beach!' : 'Stays in selected map area'}</h1>
+
                         <div className="fo">
                             <button>Cancellation Flexibility</button>
                             <button>Type of Place</button>

@@ -181,9 +181,9 @@ class ListingShow extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="descript">
+                                {/* <div className="descript">
                                     {this.props.listing.description}
-                                </div>
+                                </div> */}
                         
 
                             </div>
@@ -194,14 +194,15 @@ class ListingShow extends React.Component {
                             <JMap listing={this.props.listing} singleListing={true}/>
                         </div> */}
 
-                        <div>
-                            <div>
+                        <div className="pricecalc">
+                            <div className="pricereviews">
                                 <span>Price</span>
+                                <span>Reviews</span>
                             </div>
 
-                            <div>
-                                <div>
-                                    <div>
+                            {/* <div className="lsdates">
+                                <div className="lsdatesa">
+                                    <div className="lsdatesaa">
                                         <span>Check In</span>
                                     </div>
                                     <div>
@@ -209,41 +210,59 @@ class ListingShow extends React.Component {
                                     </div>
                                 </div>
 
-                                <div>
+                                <div className="lsdatesb">
                                     <span>Guests</span>
                                 </div>
-                            </div>
+                            </div> */}
 
-                            <div>
+                            <form className="lsdates">
+                                <div className="lsdatesa">
+                                    <div className="lsdatesaa">
+                                        <span>CHECK IN</span>
+                                        <input type="date" id="lsda"/>
+                                    </div>
+                                    <div>
+                                        <span>CHECK OUT</span>
+                                        <input type="date" id="lsda" />
+                                    </div>
+                                </div>
+
+                                <div className="lsdatesb">
+                                    <span>GUESTS</span>
+                                    <input type="number" id="lsda"/>
+                                </div>
+                            </form>
+
+                            <div className="lsbut">
                                 <button>Reserve</button>
                             </div>
 
-                            <div>
+                            <div className="lsline">
                                 <span>You won't be charged yet</span>
                             </div>
 
-                            <div>
-                                <div>
+                            <div className="lsprices">
+                                <div className="lspricesa">
                                     <span>${this.props.listing.price} x 7 nights</span>
                                     <span>${nights.toFixed(2)}</span>
                                 </div>
 
-                                <div>
+                                <div className="lspricesa">
                                     <span>Cleaning fee</span>
                                     <span>${cleaning.toFixed(2)}</span>
                                 </div>
 
-                                <div>
+                                <div className="lspricesa">
                                     <span>Service fee</span>
                                     <span>${service.toFixed(2)}</span>
                                 </div>
 
-                                <div>
+                                <div className="lspricesa">
                                     <span>Occupancy taxes and fees</span>
                                     <span>${occupancy.toFixed(2)}</span>
                                 </div>
 
-                                <div>
+                                <div className="lspricesaf">
                                     <span>Total</span>
                                     <span>${total}</span>
                                 </div>

@@ -203,3 +203,138 @@
     font-weight: 300;
     
 }
+
+.pricecalc {
+    position: relative;
+    top: 45px;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 372px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    box-shadow: 0px 6px 16px rgb(240, 238, 238);
+    font-family: Circular Air Book;
+}
+
+.pricereviews {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.pricereviews :first-child {
+    flex:1
+}
+
+.lsdates {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    padding-top: 5px;
+    
+}
+
+.lsdatesa {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    height: 56px;
+}
+
+.lsdatesa span {
+    font-size: 12px;
+}
+
+.lsdatesaa{
+    border-right: 1px solid lightgray;
+    width: 50%;
+}
+
+
+.lsdatesb{
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    height: 56px;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+#lsda {
+    border: none;
+}
+
+.lsbut {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.lsbut button {
+    width: 85%;
+    height: 40px;
+    background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+    color: white;
+    border-radius: 10px;
+    // border: 1px solid red;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    font-family: Circular Air Book;
+}
+
+.lsline {
+    display: flex;
+    justify-content: center;
+}
+
+.lsprices {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lspricesa {
+    display: flex;
+    color: rgb(34, 34, 34);
+;
+    margin-top: 25px;
+    font-weight: 400;
+    
+}
+
+.lspricesa :first-child{
+  
+    flex: 1;
+}
+
+.lspricesaf {
+    padding-top: 24px;
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.lspricesaf :first-child{
+  
+    flex: 1;
+}
