@@ -21,3 +21,11 @@ export const createListing = listing => (
         data: { listing }
     })
 );
+
+export const createReview = review => (
+    $.ajax({
+        method: 'POST',
+        url: 'api/reviews',
+        data: { review }
+    })
+);

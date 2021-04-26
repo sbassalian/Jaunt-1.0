@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
         // listings: state.entities.listings,
         listingId: ownProps.match.params.listingId,
         currentUser: state.entities.users[state.session.id],
-        filters: state.ui.filters
+        filters: state.ui.filters,
+        state: state
     };
 };
 

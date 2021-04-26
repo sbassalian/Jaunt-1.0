@@ -2,6 +2,10 @@ import React from 'react';
 import NavBarContainer from '../navbar/navbar_container'
 import JMap from '../map/map'
 import SearchContainer from '../search/search_container'
+import Review from '../reviews/review';
+import ReviewFormContainer from '../reviews/review_form_container'
+import { ProtectedRoute } from '../../util/route_util';
+import { ReviewLink } from '../../util/link_util';
 
 
 class ListingShow extends React.Component {
@@ -54,6 +58,20 @@ class ListingShow extends React.Component {
         return Math.round((second - first) / (1000 * 60 * 60 * 24));
     }
 
+    reviewList(reviews = []){
+    reviews = this.props.listing.reviewIds.map(id => reviews[id]);
+
+    return(
+    reviews.map(review => (
+        <Review
+            review={review}
+            key={review.id}
+        />
+    )))
+    console.log("LOOOOOOK")
+    console.log(reviews)
+}
+
 
 
     
@@ -61,6 +79,11 @@ class ListingShow extends React.Component {
     
     render(){
         if (this.state["render"]){
+
+        
+                
+            
+            
             
            
             let nights = this.props.listing.price * (this.datediff(this.parseDate(this.props.filters.startDate),this.parseDate(this.props.filters.endDate)));
@@ -318,6 +341,26 @@ class ListingShow extends React.Component {
                             <JMap listing={this.props.listing} singleListing={true}/>
                     </div>
 
+                    <ReviewLink
+                        component={ReviewFormContainer}
+                        to={`/listings/${this.props.listing.id}/review`}
+                        label="Leave a Review"
+                    />
+                    <ProtectedRoute
+                        path="/listings/:listingId/review"
+                        component={ReviewFormContainer}
+                    />
+
+                    <div className="reviews">
+                        <h3>Reviews</h3>
+
+
+                        
+                     
+                            {this.reviewList(this.props.listing.reviews)}
+               
+                        
+                    </div>
 
                 </div>
             )

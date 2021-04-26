@@ -15,7 +15,7 @@ class Api::ListingsController < ApplicationController
       listings = listings.where("#{params[:minGuests]} <= num_guests_avail") 
     end
    
-    @listings = listings
+    @listings = listings.includes(:reviews)
     
     render :index
   end
