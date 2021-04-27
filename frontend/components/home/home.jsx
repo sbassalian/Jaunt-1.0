@@ -19,7 +19,7 @@ class Home extends React.Component {
     }
     
     handleClick(){
-        this.props.history.push(`/listings`);
+        this.props.history.push(`/listings`)
     }
 
     handleClickHome() {

@@ -9,6 +9,10 @@ class Search extends React.Component {
         
     }
 
+    componentDidMount(){
+        this.props.updateFilter('destination', 'Miami Beach')
+    }
+
 
     handleClick() {
         this.props.history.push(`/listings`);
