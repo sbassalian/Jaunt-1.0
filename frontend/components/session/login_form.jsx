@@ -184,7 +184,7 @@ class LoginForm extends React.Component {
                 </div>
 
                 <div className="dont-have-acct">
-                    <span>Dont have an account?</span>
+                    <span className="dhac">Dont have an account?</span>
                     <button onClick={() => this.props.closeModal()} onClick={() => this.props.openModal('signup')}>Sign up here!</button>
                     
                 </div>

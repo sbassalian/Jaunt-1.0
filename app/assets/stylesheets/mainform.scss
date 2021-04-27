@@ -64,3 +64,21 @@
 #lighter {
     font-weight: 200;
 }
+
+.dont-have-acct-2 button {
+    // border: none;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.dont-have-acct button {
+    // border: none;
+    padding: 5px;
+    margin-left: 5px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}

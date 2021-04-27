@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class Search extends React.Component {
     constructor(props) {
         super(props)
-        console.log(this.props);
+        
     }
 
 
@@ -25,7 +25,7 @@ class Search extends React.Component {
 
 
     render() {
-        console.log(this.props.startDate)
+        
         
         return (
             <div className="search-bar">

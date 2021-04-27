@@ -118,7 +118,7 @@ class SignupForm extends React.Component{
                     </div>
 
                     <div className="dont-have-acct-2">
-                        <span>Already have an account?</span>
+                        <span className="dhac">Already have an account?</span>
                         <button onClick={() => this.props.closeModal()} onClick={() => this.props.openModal('login')}>Log in here!</button>
 
                     </div>

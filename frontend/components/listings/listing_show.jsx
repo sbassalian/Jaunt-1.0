@@ -32,9 +32,9 @@ class ListingShow extends React.Component {
         return e => this.props.updateFilter(filter, e.currentTarget.value)
     };
 
-    handleNothing(){
-        console.log("hi")
-    }
+    // handleNothing(){
+    //     console.log("hi")
+    // }
 
     // componentDidUpdate() {
     //     this.props.fetchListing(this.props.listingId)
@@ -46,13 +46,12 @@ class ListingShow extends React.Component {
 
     parseDate(str) {
     let ymd = str.split('-');
-    console.log(ymd)
+    
     return new Date(ymd[0], ymd[1] - 1, ymd[2]);
     }
 
     datediff(first, second) {
-        console.log(first)
-        console.log(second)
+      
     // Take the difference between the dates and divide by milliseconds per day.
     // Round to nearest whole number to deal with DST.
         return Math.round((second - first) / (1000 * 60 * 60 * 24));
@@ -68,8 +67,7 @@ class ListingShow extends React.Component {
             key={review.id}
         />
     )))
-    console.log("LOOOOOOK")
-    console.log(reviews)
+  
 }
 
 
@@ -82,7 +80,7 @@ class ListingShow extends React.Component {
 
         
                 
-            
+            console.log(this.props)
             
             
            
@@ -92,8 +90,7 @@ class ListingShow extends React.Component {
             let occupancy = this.props.listing.price * .074
             let total = (nights + cleaning + service + occupancy).toFixed(2)
 
-            console.log(this.props)
-
+            
             
             const pu1 = this.props.listing.picture_url_1;
             return(
@@ -255,8 +252,8 @@ class ListingShow extends React.Component {
 
                         <div className="pricecalc">
                             <div className="pricereviews">
-                                <span>Price</span>
-                                <span>Reviews</span>
+                                <span>${this.props.listing.price} / night</span>
+                                
                             </div>
 
                             {/* <div className="lsdates">
@@ -336,37 +333,50 @@ class ListingShow extends React.Component {
 
                     </div>
 
-                    
+                    <div className="needfont">
+                        <h2>Location</h2>
+                    </div>
                     <div className="map2">
                             <JMap listing={this.props.listing} singleListing={true}/>
                     </div>
 
-                    <ReviewLink
-                        component={ReviewFormContainer}
-                        to={`/listings/${this.props.listing.id}/review`}
-                        label="Leave a Review"
-                    />
-                    <ProtectedRoute
-                        path="/listings/:listingId/review"
-                        component={ReviewFormContainer}
-                    />
-
-                    <div className="reviews">
-                        <h3>Reviews</h3>
-
-
-                        
-                     
-                            {this.reviewList(this.props.listing.reviews)}
-               
-                        
+                    <div className="abovereviews">
+                        <h2>Reviews</h2>
                     </div>
+
+                    <div className="reviewsdiv">
+                        {/* <ReviewLink
+                            component={ReviewFormContainer}
+                            to={`/listings/${this.props.listing.id}/review`}
+                            label="Leave a Review"
+                        />
+
+                        <ProtectedRoute
+                            path="/listings/:listingId/review"
+                            component={ReviewFormContainer}
+                        /> */}
+
+                        <div>
+                            <ReviewFormContainer />
+                        </div>
+
+                        <div className="middle">
+
+                        </div>
+
+                        <div className="reviews">
+                            
+                            {this.reviewList(this.props.listing.reviews)}
+                        </div>
+
+                    </div>
+
+                    
 
                 </div>
             )
         }
         else{
-            console.log("hit")
             return(
                 <div>
                     {/* <h1>Loading!</h1> */}

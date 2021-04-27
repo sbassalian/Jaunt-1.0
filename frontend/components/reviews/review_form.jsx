@@ -13,7 +13,7 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e) {
-        console.log(this.props.listingId)
+       
         e.preventDefault();
         const listingId = parseInt(this.props.match.params.listingId);
 
@@ -21,7 +21,7 @@ class ReviewForm extends React.Component {
             listing_id: this.props.listingId
         });
 
-        console.log(review);
+        
 
         this.props.createReview(review);
     
