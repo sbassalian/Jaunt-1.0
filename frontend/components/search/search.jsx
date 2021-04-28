@@ -6,11 +6,14 @@ import { Link } from 'react-router-dom';
 class Search extends React.Component {
     constructor(props) {
         super(props)
-        
+    
     }
 
     componentDidMount(){
-        this.props.updateFilter('destination', 'Miami Beach')
+        if (!this.props.singleListing){
+
+            this.props.updateFilter('destination', 'Miami Beach')
+        }
     }
 
 
@@ -29,7 +32,8 @@ class Search extends React.Component {
 
 
     render() {
-        
+        console.log("Search MEEEEEEEEEEEEE")
+        console.log(this.props)
         
         return (
             <div className="search-bar">

@@ -58,15 +58,21 @@ class ListingShow extends React.Component {
     }
 
     reviewList(reviews = []){
-    reviews = this.props.listing.reviewIds.map(id => reviews[id]);
+    // console.log(reviews);
 
-    return(
-    reviews.map(review => (
-        <Review
-            review={review}
-            key={review.id}
-        />
-    )))
+    reviews = this.props.listing.reviewIds.map(id => reviews[id]);
+        return(
+        reviews.map(review => {
+            console.log(review);
+            console.log("WTF IS GOING ON")
+            return (<Review
+                review={review}
+                key={review.id}
+            />)
+        }
+            
+        ))
+    
   
 }
 
@@ -81,6 +87,7 @@ class ListingShow extends React.Component {
         
                 
             console.log(this.props)
+          
             
             
            
@@ -118,7 +125,7 @@ class ListingShow extends React.Component {
                                 </button>
                             </div> */}
                             
-                            < SearchContainer />
+                            < SearchContainer singleListing={true}/>
                         </div>
     
     
@@ -360,13 +367,14 @@ class ListingShow extends React.Component {
                             <ReviewFormContainer />
                         </div>
 
-                        <div className="middle">
-
-                        </div>
 
                         <div className="reviews">
                             
+                            {/* <button onClick={this.reviewList(this.props.listing.reviews)}>HIT ME</button> */}
                             {this.reviewList(this.props.listing.reviews)}
+
+                            {/* <Review review={{ id: 1, rating: 5, body: "Great Host!", listing_id: 1 }} /> */}
+
                         </div>
 
                     </div>

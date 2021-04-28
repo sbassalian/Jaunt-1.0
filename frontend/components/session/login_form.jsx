@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
     }
 
     handleDemoSubmit(e){
-        debugger
+        
         e.preventDefault();
         let demoState = 
             {
