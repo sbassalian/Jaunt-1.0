@@ -22,7 +22,6 @@ class JMap extends React.Component {
             let hello1 = document.getElementById('map');
             if (true) {
                 hello1.id = "map2";
-                console.log("hit meeeeee")
             }
             this.MarkerManager.createMarkerFromListing(this.props.listing);
             // this.props.fetchListing(this.props.listingId);
@@ -39,7 +38,6 @@ class JMap extends React.Component {
             // let hello1 = document.getElementById('map');
             // if (true) {
             //     hello1.id = "map2";
-            //     console.log("hit meeeeee")
             // }
             // const targetListingKey = Object.keys(this.props.listings)[0];
             // const targetListing = this.props.listings[targetListingKey];

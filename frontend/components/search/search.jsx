@@ -32,8 +32,7 @@ class Search extends React.Component {
 
 
     render() {
-        console.log("Search MEEEEEEEEEEEEE")
-        console.log(this.props)
+   
         
         return (
             <div className="search-bar">

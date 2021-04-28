@@ -11,7 +11,7 @@ class ListingsIndex extends React.Component{
         this.handleClick = this.handleClick.bind(this);
         this.handleClickHome = this.handleClickHome.bind(this);
         this.state = {listings:[]};
-        console.log(this.props);
+
         
     }
 
@@ -36,7 +36,6 @@ class ListingsIndex extends React.Component{
         let idk = true;
         // let mounted = false;
         if (idk){
-        // console.log(document.getElementById("uid").value)
         
         return(
             <div className="plsss">

@@ -22,4 +22,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(ListingShow);
-// export default connect(null, null)(ListingShow);

@@ -21,7 +21,6 @@ class ReviewForm extends React.Component {
             listing_id: this.props.listingId
         });
 
-        
 
         this.props.createReview(review);
     

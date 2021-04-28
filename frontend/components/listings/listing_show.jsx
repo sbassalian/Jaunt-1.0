@@ -33,7 +33,7 @@ class ListingShow extends React.Component {
     };
 
     // handleNothing(){
-    //     console.log("hi")
+
     // }
 
     // componentDidUpdate() {
@@ -58,13 +58,12 @@ class ListingShow extends React.Component {
     }
 
     reviewList(reviews = []){
-    // console.log(reviews);
+    
 
     reviews = this.props.listing.reviewIds.map(id => reviews[id]);
         return(
         reviews.map(review => {
-            console.log(review);
-            console.log("WTF IS GOING ON")
+     
             return (<Review
                 review={review}
                 key={review.id}
@@ -86,7 +85,7 @@ class ListingShow extends React.Component {
 
         
                 
-            console.log(this.props)
+      
           
             
             
