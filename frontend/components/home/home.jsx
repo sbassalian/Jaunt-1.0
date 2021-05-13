@@ -33,8 +33,11 @@ class Home extends React.Component {
                 
                 <div className="top">
                     <div className="covid-header">
-                        <p>Get the latest on our COVID-19 response</p>
+                        {/* <p>Get the latest on our COVID-19 response</p> */}
+                   
                     </div>
+
+                  
 
                     <div className="background">
                         <div className="header">
@@ -47,14 +50,14 @@ class Home extends React.Component {
                             </div>
 
                             <nav className="header-center">
-                                <a className="link1" href="">
-                                    <button className="hcb">Places to stay</button>
+                                <a className="link1" href="https://www.linkedin.com/in/solomon-bassalian-software-engineer/" target="_blank">
+                                    <button className="hcb">Linkedin</button>
                                 </a>
-                                <a className="link2" href="">
-                                    <button className="hcb">Experiences</button>
+                                <a className="link2" href="https://angel.co/u/solomon-bassalian" target="_blank">
+                                    <button className="hcb">Github</button>
                                 </a>
-                                <a className="link3" href="">
-                                    <button className="hcb">Online Experiences</button>
+                                <a className="link3" href="https://github.com/sbassalian" target="_blank">
+                                    <button className="hcb">AngelList</button>
                                 </a>
                             </nav>
 

@@ -11,6 +11,7 @@ class SignupForm extends React.Component{
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.renderErrors = this.renderErrors.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
 
 
     }
@@ -30,6 +31,17 @@ class SignupForm extends React.Component{
         let user = Object.assign({}, this.state);
         // this.props.action(user).then(() => this.props.history.push('/'))
         this.props.action(user).then(this.props.closeModal);
+    }
+
+    handleDemoSubmit(e) {
+
+        e.preventDefault();
+        let demoState =
+        {
+            email: 'solomonbassalian@gmail.com',
+            password: '1234567'
+        };
+        this.props.login(demoState).then(this.props.closeModal);
     }
 
     renderErrors() {
@@ -110,10 +122,15 @@ class SignupForm extends React.Component{
                                     placeholder="Password"
                                 />
                             </div>
-
-                            <div className="signup-texts">
-                                <span className="subtle-text">By selecting Agree and continue below, I agree to Jaunt's Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.</span>
-                            </div>
+                            
+                                <button id="subd" onClick={this.handleDemoSubmit}>
+                                    <div className="plz">
+                                        {<img className="continue-with-icons" src={window.aA} alt="" />}
+                                            Continue with Demo User
+                                        </div>
+                                </button>
+                            
+                         
                         </div>
                     </div>
 
@@ -124,7 +141,7 @@ class SignupForm extends React.Component{
                     </div>
 
                     <div className="modal-button-continue-2">
-                        <button>Continue</button>
+                        <button>Sign up</button>
                     </div>
 
 

@@ -1,3 +1,7 @@
+@import url(//db.onlinewebfonts.com/c/bd6213fa49bedc8cb050c63f14360efa?family=Circular+Air+Book);
+
+@font-face {font-family: "Circular Air Book"; src: url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.eot"); src: url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.woff") format("woff"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.svg#Circular Air Book") format("svg"); }
+
 .form-header {
         display: flex;
         align-items: center;
@@ -10,7 +14,7 @@
     position: absolute;
     left: 264px;
     top: 8px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Circular Air Book;
     font-weight: 700;
     font-size: 16px;
 }
@@ -71,7 +75,7 @@ form .data {
     border: none;
     background: none;
     outline: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Circular Air Book;
     
 }
 
@@ -87,7 +91,7 @@ form .data {
     // background-color: red;
     background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
     color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Circular Air Book;
     border-radius: 10px;
     border: 1px solid red;
     cursor: pointer;
@@ -105,7 +109,7 @@ form .data {
     justify-content: center;
     color: #484848;
     font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Circular Air Book;
 
 }
 .or span{
@@ -146,7 +150,7 @@ form .data {
     font-size: 14px;
     background-color: white;
     color: rgb(72, 72, 72);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Circular Air Book;
     border-radius: 10px;
     border: 2px solid rgb(161, 160, 160);
     cursor: pointer;
@@ -198,7 +202,7 @@ form .data {
 
 .dont-have-acct span {
     padding-left: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Circular Air Book;
     font-size: 14px;
     color: #484848;
 }
@@ -217,3 +221,4 @@ form .data {
 .rend-errors-2{
     width: max-content;
 }
+

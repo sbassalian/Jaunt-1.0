@@ -80,13 +80,13 @@ class ListingsIndex extends React.Component{
                         
                         <h1>{!this.props.listings.length ? 'Sorry, no current stays here. Try searching Miami Beach!' : 'Stays in selected map area'}</h1>
 
-                        <div className="fo">
+                        {/* <div className="fo">
                             <button>Cancellation Flexibility</button>
                             <button>Type of Place</button>
                             <button>Price</button>
                             <button>Instant Book</button>
                             <button>More Filters</button>
-                        </div>
+                        </div> */}
                         <span className="cv">Please review COVID-19 travel restrictions before you book.</span>
                         
                         {this.props.listings.map((listing) => (

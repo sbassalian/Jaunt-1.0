@@ -5,17 +5,18 @@
 @font-face {font-family: "Circular Air Book"; src: url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.eot"); src: url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.woff") format("woff"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/bd6213fa49bedc8cb050c63f14360efa.svg#Circular Air Book") format("svg"); }
 
 .top .covid-header {
-    background-color:#222222;
+    background-color:black
+    ;
     color:#A3A3A3;
     text-align: center;
     top: 0;
     left: 0;
     position: absolute;
     width: 100%;
-    z-index: 1;
+    // z-index: 1;
     height: 58px;
     // line-height: 18px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-size: 14px;
     text-decoration: underline;
     font-weight: 600;
@@ -36,7 +37,7 @@
 .top .background .background-home-image {
     position: absolute;
     width: 95%;
-    top: 160px;
+    top: 110px;
     left: 0;
     right: 0;
     margin: auto;
@@ -50,7 +51,7 @@
     width: 848px;
     height: 64px;
     position: absolute;
-    top: 125px;
+    top: 75px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -128,12 +129,12 @@
     color: white;
     font-size: 30px;
     font-weight: 400;
-    top: 653px;
+    top: 623px;
     left: 0;
     right: 0;
     margin: auto;
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
 }
 
 
@@ -142,12 +143,12 @@
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 1000;
+
     // background-color: white;
-    // z-index: 3;
-    margin: 10px auto auto auto;
+    z-index: 900;
+    // margin: 10px auto auto auto;
     width: 100%;
-    padding-top: 50px;
+    // padding-top: 50px;
     color: white;
 }
 
@@ -158,7 +159,7 @@
     justify-content: space-between;
     font-size: large;
     margin: auto auto auto 80px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
 }
 
 .top .background .header-left .home-icon {
@@ -181,7 +182,7 @@
 
 .hcb {
     background: transparent;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 300;
     color: white;
     font-size: 16px;
@@ -212,7 +213,7 @@
 .bah {
     background: transparent;
     border: none;
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Circular Air Book;
     font-weight: 300;
     color: white;
     font-size: 12px;
@@ -299,13 +300,13 @@
 }
 
 .lic1{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 400;
     padding-bottom: 5px;
 }
 
 .lic2{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 200;
 }
 
@@ -332,7 +333,7 @@
 .home-images-a {
     display: flex;
     flex-direction: column;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 450;
     font-size: 18px;
 }
@@ -382,7 +383,7 @@
     width: 350px;
     height: 310px;
 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
 }
 
 .bah2a {
@@ -407,7 +408,7 @@
     background: white;
     width: 200px;
     height: 50px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
@@ -418,14 +419,14 @@
     // padding-bottom: 10px;
     margin-top: 70px;
     margin-bottom: 10px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 650;
     
 }
 
 .etws {
     padding-left: 110px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 300;
     font-size: 24px;
 
@@ -450,13 +451,13 @@
 .explore-a {
     display: flex;
     flex-direction: column;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 400;
     font-size: 18px;
 }
 
 .explore-s {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 250;
     font-size: 14px;
     padding-top: 5px;
@@ -482,7 +483,7 @@
     width: 85%;
     border-top: 1px solid lightgray;
     padding-top: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: Circular Air Book;
     font-weight: 250;
     font-size: 14px;
     align-items: center;

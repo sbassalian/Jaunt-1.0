@@ -120,7 +120,7 @@ class LoginForm extends React.Component {
                     <div className="continue-with-2">
 
                         <div className="try-this">
-                            <a href="https://www.linkedin.com/in/solomon-bassalian-ba3662174/">
+                            <a href="https://www.linkedin.com/in/solomon-bassalian-ba3662174/" target="_blank">
                                 <button>
                                 <div className="plz">
                                     {<img className="continue-with-icons" src={window.linkedin} alt="" />}
@@ -131,7 +131,7 @@ class LoginForm extends React.Component {
                         </div>
 
                             <div className="try-this">
-                        <a href="https://github.com/sbassalian">
+                            <a href="https://github.com/sbassalian" target="_blank">
                                  <button>
                                      <div className="plz">
 
@@ -144,13 +144,13 @@ class LoginForm extends React.Component {
 
 
                             <div className="try-this">
-                                <a href="https://www.google.com/">
+                            <a href="https://angel.co/u/solomon-bassalian" target="_blank">
                                 <button>
                                     <div className="plz">
 
-                                        {<img className="continue-with-icons" src={window.googleimg} alt="" />}
+                                        {<img className="continue-with-icons" src={window.al} alt="" />}
                                         
-                                        {<span>Continue with Google</span>}
+                                        {<span>Continue to my AngelList</span>}
                                         {/* Continue with Google  */}
                                     </div>
                                 </button>   
